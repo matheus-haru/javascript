@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#res {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Passaporte</h1>
+    <label for="icountry">Nação de origem:</label>
+    <input type="text" name="country" id="icountry" size="15">
+    <input type="button" value="Verificar" onclick="verify()">
+    <div id="res"></div>
+    <script>
+        function verify() {
+            var pais = document.getElementById('icountry').value
+            pais = pais.toLowerCase()
+            var res = document.getElementById('res')
+            if (pais == 'brasil') {
+                res.innerHTML = 'Você é Brasileiro'
+            } else {
+                res.innerHTML = 'Você é Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
