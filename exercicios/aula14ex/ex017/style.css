@@ -29,3 +29,8 @@ footer {
 #none {
     display: none;
 }
+
+select {
+    margin-top: 10px;
+    overflow: hidden;
+}
